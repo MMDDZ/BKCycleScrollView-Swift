@@ -1,0 +1,20 @@
+PODS:
+  - Gifu (3.1.0)
+  - Kingfisher (4.8.0)
+
+DEPENDENCIES:
+  - Gifu
+  - Kingfisher
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Gifu
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Gifu: fd1e9e3a15ac5d90bae0a510e4ed9f94b485ab03
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+
+PODFILE CHECKSUM: 6bf1e39a904dec7699a06257e23ee00c650254ae
+
+COCOAPODS: 1.5.3
