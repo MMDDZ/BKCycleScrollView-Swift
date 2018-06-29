@@ -10,19 +10,27 @@
 		1098F71FC23D28349E11C074 /* Pods_BKCycleScrollView_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCDCC3C3C32D931E180A2FE /* Pods_BKCycleScrollView_Swift.framework */; };
 		1D0DCA8020E38203001D1074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DCA7F20E38203001D1074 /* AppDelegate.swift */; };
 		1D0DCA8220E38203001D1074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DCA8120E38203001D1074 /* ViewController.swift */; };
-		1D0DCA8520E38203001D1074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0DCA8320E38203001D1074 /* Main.storyboard */; };
 		1D0DCA8720E38205001D1074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0DCA8620E38205001D1074 /* Assets.xcassets */; };
-		1D0DCA8A20E38205001D1074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0DCA8820E38205001D1074 /* LaunchScreen.storyboard */; };
+		1D0DCA9320E39291001D1074 /* BKCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DCA9220E39291001D1074 /* BKCycleScrollView.swift */; };
+		1D361C7920E4801A005B3AAF /* BKCycleScrollCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D361C7820E4801A005B3AAF /* BKCycleScrollCollectionViewCell.swift */; };
+		1D361C7B20E4804E005B3AAF /* BKCycleScrollCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D361C7A20E4804E005B3AAF /* BKCycleScrollCollectionViewFlowLayout.swift */; };
+		1D361C7D20E48E69005B3AAF /* BKCycleScrollPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D361C7C20E48E69005B3AAF /* BKCycleScrollPageControl.swift */; };
+		1DA2948F20E5FE57007A8B33 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1DA2948E20E5FE57007A8B33 /* 4.gif */; };
+		1DA2949120E631CE007A8B33 /* BKCycleScrollImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2949020E631CE007A8B33 /* BKCycleScrollImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D0DCA7C20E38203001D1074 /* BKCycleScrollView-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BKCycleScrollView-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0DCA7F20E38203001D1074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D0DCA8120E38203001D1074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1D0DCA8420E38203001D1074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D0DCA8620E38205001D1074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1D0DCA8920E38205001D1074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D0DCA8B20E38205001D1074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D0DCA9220E39291001D1074 /* BKCycleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCycleScrollView.swift; sourceTree = "<group>"; };
+		1D361C7820E4801A005B3AAF /* BKCycleScrollCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCycleScrollCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D361C7A20E4804E005B3AAF /* BKCycleScrollCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCycleScrollCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		1D361C7C20E48E69005B3AAF /* BKCycleScrollPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCycleScrollPageControl.swift; sourceTree = "<group>"; };
+		1DA2948E20E5FE57007A8B33 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		1DA2949020E631CE007A8B33 /* BKCycleScrollImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCycleScrollImageView.swift; sourceTree = "<group>"; };
 		25C7C58E04BA946BA59EE763 /* Pods-BKCycleScrollView-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKCycleScrollView-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BKCycleScrollView-Swift/Pods-BKCycleScrollView-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		66086279148271574EF78687 /* Pods-BKCycleScrollView-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKCycleScrollView-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BKCycleScrollView-Swift/Pods-BKCycleScrollView-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		ABCDCC3C3C32D931E180A2FE /* Pods_BKCycleScrollView_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BKCycleScrollView_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,14 +69,26 @@
 		1D0DCA7E20E38203001D1074 /* BKCycleScrollView-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				1D0DCA9120E39264001D1074 /* BKCycleScrollview */,
 				1D0DCA7F20E38203001D1074 /* AppDelegate.swift */,
 				1D0DCA8120E38203001D1074 /* ViewController.swift */,
-				1D0DCA8320E38203001D1074 /* Main.storyboard */,
 				1D0DCA8620E38205001D1074 /* Assets.xcassets */,
-				1D0DCA8820E38205001D1074 /* LaunchScreen.storyboard */,
 				1D0DCA8B20E38205001D1074 /* Info.plist */,
+				1DA2948E20E5FE57007A8B33 /* 4.gif */,
 			);
 			path = "BKCycleScrollView-Swift";
+			sourceTree = "<group>";
+		};
+		1D0DCA9120E39264001D1074 /* BKCycleScrollview */ = {
+			isa = PBXGroup;
+			children = (
+				1D0DCA9220E39291001D1074 /* BKCycleScrollView.swift */,
+				1D361C7A20E4804E005B3AAF /* BKCycleScrollCollectionViewFlowLayout.swift */,
+				1D361C7820E4801A005B3AAF /* BKCycleScrollCollectionViewCell.swift */,
+				1D361C7C20E48E69005B3AAF /* BKCycleScrollPageControl.swift */,
+				1DA2949020E631CE007A8B33 /* BKCycleScrollImageView.swift */,
+			);
+			path = BKCycleScrollview;
 			sourceTree = "<group>";
 		};
 		492831872810914578CB9EFE /* Pods */ = {
@@ -148,9 +168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D0DCA8A20E38205001D1074 /* LaunchScreen.storyboard in Resources */,
+				1DA2948F20E5FE57007A8B33 /* 4.gif in Resources */,
 				1D0DCA8720E38205001D1074 /* Assets.xcassets in Resources */,
-				1D0DCA8520E38203001D1074 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,30 +222,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D0DCA8220E38203001D1074 /* ViewController.swift in Sources */,
+				1D361C7D20E48E69005B3AAF /* BKCycleScrollPageControl.swift in Sources */,
+				1D0DCA9320E39291001D1074 /* BKCycleScrollView.swift in Sources */,
+				1DA2949120E631CE007A8B33 /* BKCycleScrollImageView.swift in Sources */,
 				1D0DCA8020E38203001D1074 /* AppDelegate.swift in Sources */,
+				1D361C7B20E4804E005B3AAF /* BKCycleScrollCollectionViewFlowLayout.swift in Sources */,
+				1D361C7920E4801A005B3AAF /* BKCycleScrollCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1D0DCA8320E38203001D1074 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D0DCA8420E38203001D1074 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1D0DCA8820E38205001D1074 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D0DCA8920E38205001D1074 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D0DCA8C20E38205001D1074 /* Debug */ = {
@@ -348,6 +353,7 @@
 			baseConfigurationReference = 66086279148271574EF78687 /* Pods-BKCycleScrollView-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 779S864B3K;
 				INFOPLIST_FILE = "BKCycleScrollView-Swift/Info.plist";
@@ -359,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "BIKE.BKCycleScrollView-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -368,6 +374,7 @@
 			baseConfigurationReference = 25C7C58E04BA946BA59EE763 /* Pods-BKCycleScrollView-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 779S864B3K;
 				INFOPLIST_FILE = "BKCycleScrollView-Swift/Info.plist";
@@ -379,7 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "BIKE.BKCycleScrollView-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

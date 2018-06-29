@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BKCycleScrollView-Swift
 //
-//  Created by zhaolin on 2018/6/27.
+//  Created by BIKE on 2018/6/27.
 //  Copyright © 2018年 BIKE. All rights reserved.
 //
 
@@ -12,10 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    lazy var vc: ViewController? = {
+        let vc = ViewController()
+        return vc
+    }()
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = vc
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
