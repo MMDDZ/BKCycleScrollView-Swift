@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         let imageUrl = Bundle.main.url(forResource: "4", withExtension: "gif")!
         let imageData : Any = UIImageJPEGRepresentation(UIImage(named: "3")!, 1) ?? ""
         let gifData : Any = (try? Data(contentsOf: imageUrl)) ?? ""
+        print([UIImage(named: "1") ?? "", UIImage(named: "2") ?? "", imageData, gifData])
         return [UIImage(named: "1") ?? "", UIImage(named: "2") ?? "", imageData, gifData]
     }()
     private let netImageArr = ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528368399685&di=d6d322d6cf932ebbf569303d0bade418&imgtype=0&src=http%3A%2F%2Fpic1.16pic.com%2F00%2F07%2F66%2F16pic_766152_b.jpg","https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528368294842&di=5de9f86a4001b2f04d04b65e1573122d&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F13%2F71%2F35%2F24k58PICSiB_1024.jpg","https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528368334917&di=fc058e94d3951768c4151104f707a347&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fa1%2F63%2Fd%2F121.jpg"]
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
         cycleScrollView1.itemWidth = view.frame.size.width - 40
         cycleScrollView1.itemReduceScale = 0.1
         cycleScrollView1.radius = 12
+        cycleScrollView1.delegate = self
         return cycleScrollView1
     }()
 
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
         let cycleScrollView2 = BKCycleScrollView(frame: CGRect(x: 0, y: cycleScrollView1.frame.maxY + 40, width: view.frame.size.width, height: 150), displayDataArr: localImageArr)
         cycleScrollView2.layoutStyle = .normal
         cycleScrollView2.pageControlStyle = .normalDots
+        cycleScrollView2.delegate = self
         return cycleScrollView2
     }()
     
@@ -47,20 +50,38 @@ class ViewController: UIViewController {
         cycleScrollView3.pageControlStyle = .longDots
         cycleScrollView3.normalDotColor = UIColor.yellow
         cycleScrollView3.selectDotColor = UIColor.brown
-        
-    
-        
+        cycleScrollView3.delegate = self
         return cycleScrollView3
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addSubview(cycleScrollView1)
         view.addSubview(cycleScrollView2)
         view.addSubview(cycleScrollView3)
-        
     }
-
 }
 
+extension ViewController : BKCycleScrollViewDelegate {
+    func selectItemAction(_ cycleScrollView: BKCycleScrollView, selectIndex: Int) {
+        if cycleScrollView1 == cycleScrollView {
+            print("点击了cycleScrollView1的\(selectIndex)")
+        }else if cycleScrollView2 == cycleScrollView {
+            print("点击了cycleScrollView2的\(selectIndex)")
+        }else{
+            print("点击了cycleScrollView3的\(selectIndex)")
+        }
+    }
+    
+//    /// 自定义cell样式
+//    func customCellStyle(_ cycleScrollView: BKCycleScrollView, displayIndex: Int, displayCell: UICollectionViewCell) {
+//        
+//        displayCell.subviews.forEach { (subView) in
+//            subView.removeFromSuperview()
+//        }
+//        
+//        let redView = UIView(frame: displayCell.bounds)
+//        redView.backgroundColor = UIColor.red
+//        displayCell.addSubview(redView)
+//    }
+}

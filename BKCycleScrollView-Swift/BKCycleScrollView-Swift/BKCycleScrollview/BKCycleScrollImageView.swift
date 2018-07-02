@@ -2,7 +2,7 @@
 //  BKCycleScrollImageView.swift
 //  BKCycleScrollView-Swift
 //
-//  Created by zhaolin on 2018/6/29.
+//  Created by BIKE on 2018/6/29.
 //  Copyright © 2018年 BIKE. All rights reserved.
 //
 

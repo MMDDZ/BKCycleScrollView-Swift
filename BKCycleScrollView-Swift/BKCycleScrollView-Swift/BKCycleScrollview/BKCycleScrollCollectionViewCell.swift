@@ -2,7 +2,7 @@
 //  BKCycleScrollCollectionViewCell.swift
 //  BKCycleScrollView-Swift
 //
-//  Created by zhaolin on 2018/6/28.
+//  Created by BIKE on 2018/6/28.
 //  Copyright © 2018年 BIKE. All rights reserved.
 //
 
@@ -23,12 +23,16 @@ class BKCycleScrollCollectionViewCell: UICollectionViewCell {
     /// 数据
     var displayData : Any? {
         didSet {
+            
+            displayImageView.stopAnimatingGIF()
+            
             if displayData is String {
                 let imageStr = displayData as! String
                 let imageUrl = URL(string: imageStr)
                 displayImageView.kf.setImage(with: imageUrl, placeholder: placeholderImage)
             }else if displayData is UIImage {
-                displayImageView.image = displayData as? UIImage
+                let image = displayData as! UIImage
+                displayImageView.image = image
             }else if displayData is Data {
                 let imageData = displayData as! Data
                 displayImageView.prepareForAnimation(withGIFData: imageData) {
@@ -53,14 +57,11 @@ class BKCycleScrollCollectionViewCell: UICollectionViewCell {
     ///
     /// - Parameter radius: 度数
     private func cutRadius(radius: CGFloat) {
-//        let path = UIBezierPath(roundedRect: bounds, cornerRadius: radius)
-//        let maskLayer = CAShapeLayer()
-//        maskLayer.path = path.cgPath
-//        maskLayer.frame = frame
-//        layer.mask = maskLayer
-        
-        layer.cornerRadius = radius
-        layer.masksToBounds = true
+        let path = UIBezierPath(roundedRect: bounds, cornerRadius: radius)
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        maskLayer.frame = bounds
+        layer.mask = maskLayer
     }
     
     override init(frame: CGRect) {

@@ -33,7 +33,7 @@ private let kRegisterCellID : String = "BKCycleScrollCollectionViewCell"//注册
 // MARK: - 代理
 @objc protocol BKCycleScrollViewDelegate : class {
     
-//    @objc optional func selectItemAction(_ cycleScrollView: BKCycleScrollView, selectIndex: Int)
+    @objc optional func selectItemAction(_ cycleScrollView: BKCycleScrollView, selectIndex: Int)
     
     /// 自定义cell方法
     ///
@@ -42,13 +42,6 @@ private let kRegisterCellID : String = "BKCycleScrollCollectionViewCell"//注册
     ///   - displayIndex: 索引
     ///   - displayCell: 显示的cell
     @objc optional func customCellStyle(_ cycleScrollView: BKCycleScrollView, displayIndex: Int, displayCell: UICollectionViewCell)
-}
-
-extension BKCycleScrollView {
-    
-    public func selectItemAction(_ callback: (_ cycleScrollView: BKCycleScrollView, _ selectIndex: Int) -> ()) {
-        
-    }
 }
 
 // MARK: - 类创建
@@ -208,9 +201,6 @@ class BKCycleScrollView: UIView {
         }
     }
     
-    /// 选中返回
-    var selectItemAction: (_ index: Int) -> () = {_ in }
-    
     // MARK: - 私有属性
     ///collectionView开始显示的indexPath
     fileprivate var beginIndexPath : IndexPath = IndexPath(item: kMiddleCount, section: 0)
@@ -291,7 +281,7 @@ extension BKCycleScrollView {
     ///   - index: 当前所看到数据的索引
     ///   - indexPath: collectionView当前显示的indexPath
     fileprivate func resetCurrentIndex(index : Int, indexPath : IndexPath) {
-        currentIndex = index;
+        currentIndex = index
         displayIndexPath = indexPath
         
         pageControl?.currentPage = currentIndex
@@ -403,6 +393,10 @@ extension BKCycleScrollView : UICollectionViewDelegate, UICollectionViewDataSour
         
         let selectIndex = getDisplayIndex(indexPath: indexPath)
         
+        if ((delegate?.customCellStyle?(self, displayIndex: selectIndex, displayCell: cell)) != nil) {
+            return cell
+        }
+        
         cell.radius = radius
         cell.placeholderImage = placeholderImage
         
@@ -421,10 +415,7 @@ extension BKCycleScrollView : UICollectionViewDelegate, UICollectionViewDataSour
         initTimer()
         
         let selectIndex = getDisplayIndex(indexPath: indexPath)
-//        delegate?.selectItemAction!(self, selectIndex: selectIndex)
-//        selectItemAction { (self, selectIndex) in
-//            
-//        }
+        delegate?.selectItemAction?(self, selectIndex: selectIndex)
     }
 }
 
