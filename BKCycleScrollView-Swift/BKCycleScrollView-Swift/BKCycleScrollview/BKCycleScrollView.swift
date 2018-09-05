@@ -335,7 +335,7 @@ extension BKCycleScrollView {
         collectionView?.backgroundColor = displayBackgroundColor
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.bounces = false
-        collectionView?.decelerationRate = 0
+        collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
         if #available(iOS 11.0, *) {
             self.collectionView?.contentInsetAdjustmentBehavior = .never
         }
