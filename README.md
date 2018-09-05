@@ -28,4 +28,4 @@ func selectItemAction(_ cycleScrollView: BKCycleScrollView, selectIndex: Int) {
 
 ## 版本记录
     1.0 无限轮播第一版完成
-
+    1.1 优化无数据时滚动视图不能滑动

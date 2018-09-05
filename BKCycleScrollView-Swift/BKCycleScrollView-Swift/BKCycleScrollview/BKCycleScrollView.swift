@@ -299,6 +299,17 @@ extension BKCycleScrollView {
 // MARK: - UI
 extension BKCycleScrollView {
     
+    fileprivate func checkData() -> Bool {
+        if let displayDataArr = displayDataArr {
+            if displayDataArr.count > 0 {
+                collectionView?.isUserInteractionEnabled = true
+                return true
+            }
+        }
+        collectionView?.isUserInteractionEnabled = false
+        return false
+    }
+    
     /// 创建Layout
     fileprivate func initLayout() -> BKCycleScrollCollectionViewFlowLayout {
     
@@ -330,6 +341,8 @@ extension BKCycleScrollView {
         }
         collectionView?.register(BKCycleScrollCollectionViewCell.self, forCellWithReuseIdentifier: kRegisterCellID)
         collectionView?.scrollToItem(at: displayIndexPath, at: .centeredHorizontally, animated: false)
+        
+        _ = checkData()
         
         if pageControl != nil {
             insertSubview(collectionView!, belowSubview: pageControl!)
@@ -385,7 +398,7 @@ extension BKCycleScrollView {
 extension BKCycleScrollView : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return displayDataArr?.count == 0 ? 0 : kAllCount
+        return kAllCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -503,8 +516,10 @@ extension BKCycleScrollView : UIScrollViewDelegate {
 extension BKCycleScrollView {
     fileprivate func initTimer() {
         invalidateTimer()
-        timer = Timer(timeInterval: TimeInterval(kAutoScrollInterval), target: self, selector: #selector(autoScrollTimer(timer:)), userInfo: nil, repeats: true)
-        RunLoop.main.add(timer!, forMode: .commonModes)
+        if checkData() {
+            timer = Timer(timeInterval: TimeInterval(kAutoScrollInterval), target: self, selector: #selector(autoScrollTimer(timer:)), userInfo: nil, repeats: true)
+            RunLoop.main.add(timer!, forMode: .commonModes)
+        }
     }
     
     fileprivate func invalidateTimer() {

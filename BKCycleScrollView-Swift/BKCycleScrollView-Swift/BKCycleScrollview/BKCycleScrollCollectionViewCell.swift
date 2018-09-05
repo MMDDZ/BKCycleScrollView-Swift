@@ -18,29 +18,16 @@ class BKCycleScrollCollectionViewCell: UICollectionViewCell {
     }
     
     /// 占位图 无默认
-    var placeholderImage : UIImage?
+    var placeholderImage : UIImage? {
+        didSet {
+            assignImageData()
+        }
+    }
     
     /// 数据
     var displayData : Any? {
         didSet {
-            
-            displayImageView.stopAnimatingGIF()
-            
-            if displayData is String {
-                let imageStr = displayData as! String
-                let imageUrl = URL(string: imageStr)
-                displayImageView.kf.setImage(with: imageUrl, placeholder: placeholderImage)
-            }else if displayData is UIImage {
-                let image = displayData as! UIImage
-                displayImageView.image = image
-            }else if displayData is Data {
-                let imageData = displayData as! Data
-                displayImageView.prepareForAnimation(withGIFData: imageData) {
-                    self.displayImageView.startAnimatingGIF()
-                }
-            }else{
-                displayImageView.image = nil
-            }
+            assignImageData()
         }
     }
     
@@ -52,6 +39,27 @@ class BKCycleScrollCollectionViewCell: UICollectionViewCell {
         addSubview(displayImageView)
         return displayImageView
     }()
+    
+    /// 图片内容赋值
+    fileprivate func assignImageData() {
+        displayImageView.stopAnimatingGIF()
+        
+        if displayData is String {
+            let imageStr = displayData as! String
+            let imageUrl = URL(string: imageStr)
+            displayImageView.kf.setImage(with: imageUrl, placeholder: placeholderImage)
+        }else if displayData is UIImage {
+            let image = displayData as! UIImage
+            displayImageView.image = image
+        }else if displayData is Data {
+            let imageData = displayData as! Data
+            displayImageView.prepareForAnimation(withGIFData: imageData) {
+                self.displayImageView.startAnimatingGIF()
+            }
+        }else {
+            displayImageView.image = placeholderImage
+        }
+    }
     
     /// 切角
     ///
